@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "allowSyntheticDefaultImports": true,
+    "lib": ["ES2021", "dom"],
+    "noEmit": true,
+    "baseUrl": ".",
+    "paths": {
+      "@mailtrap/convex": ["../../src/client/index.ts"],
+      "@mailtrap/convex/convex.config": [
+        "../../src/component/convex.config.ts"
+      ],
+      "@mailtrap/convex/convex.config.js": [
+        "../../src/component/convex.config.ts"
+      ],
+      "@mailtrap/convex/_generated/component.js": [
+        "../../src/component/_generated/component.d.ts"
+      ]
+    }
+  },
+  "include": ["./**/*"]
+}
