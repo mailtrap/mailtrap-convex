@@ -1,0 +1,90 @@
+# Drafts new @mailtrap/convex release: bumps the version, regenerates the changelog from
+# merged PRs, and opens a release PR against main.
+#
+name: Draft Convex Release
+on:
+  workflow_dispatch:
+    inputs:
+      bump_type:
+        description: "Semver bump type"
+        required: true
+        type: choice
+        options:
+          - patch
+          - minor
+          - major
+        default: patch
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  draft-release:
+    name: Draft @mailtrap/convex Release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+          ref: main
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .tool-versions
+
+      - name: Read current version
+        id: read
+        uses: railsware/github-actions/read-version-from-package-json@master
+
+      - name: Compute next version
+        id: bump
+        uses: railsware/github-actions/compute-next-semver@master
+        with:
+          current: ${{ steps.read.outputs.version }}
+          bump-type: ${{ inputs.bump_type }}
+
+      - name: Abort if tag already exists
+        uses: railsware/github-actions/abort-if-tag-exists@master
+        with:
+          tag: ${{ steps.bump.outputs.tag }}
+
+      - name: Generate release notes
+        id: notes
+        uses: railsware/github-actions/generate-release-notes@master
+        with:
+          tag: ${{ steps.bump.outputs.tag }}
+
+      # --ignore-scripts skips preversion (build and test), which needs dependencies this job
+      # doesn't install; the Release workflow builds and tests.
+      - name: Update version in package.json
+        if: steps.notes.outputs.release_notes != ''
+        run: npm version "${{ steps.bump.outputs.next }}" --no-git-tag-version --ignore-scripts
+
+      - name: Prepend new section to CHANGELOG.md
+        if: steps.notes.outputs.release_notes != ''
+        uses: railsware/github-actions/prepend-changelog@master
+        with:
+          version: ${{ steps.bump.outputs.next }}
+          release-notes: ${{ steps.notes.outputs.release_notes }}
+
+      - name: Commit, push, open PR
+        if: steps.notes.outputs.release_notes != ''
+        uses: railsware/github-actions/open-sdk-release-pr@master
+        with:
+          tag: ${{ steps.bump.outputs.tag }}
+          current: ${{ steps.read.outputs.version }}
+          next: ${{ steps.bump.outputs.next }}
+          bump-type: ${{ inputs.bump_type }}
+          release-notes: ${{ steps.notes.outputs.release_notes }}
+
+      - name: Create draft GitHub release
+        if: steps.notes.outputs.release_notes != ''
+        uses: railsware/github-actions/create-draft-github-release@master
+        with:
+          tag: ${{ steps.bump.outputs.tag }}
+          release-notes: ${{ steps.notes.outputs.release_notes }}
