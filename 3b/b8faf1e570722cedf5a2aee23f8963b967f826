@@ -1,0 +1,33 @@
+CHANGELOG.md
+  s_4de656e97518ca::t_17c2be662ea759 1
+  s_4de656e97518ca::t_6b944ec53906f9 2
+package.json
+  s_4de656e97518ca::t_3cdeaa5f724857 4-7
+.tool-versions
+  s_4de656e97518ca::t_f85335e3855bb9 1
+.github/workflows/release.yml
+  s_4de656e97518ca::t_e4061b8de2edbe 89
+  s_4de656e97518ca::t_b49e741025e1f1 1-88,90-182
+.github/workflows/draft-release.yml
+  s_4de656e97518ca::t_41dba5da12a8a8 62-63,66
+  s_4de656e97518ca::t_b38f164266ab54 1-37,39-61,64-65,67-90
+  s_4de656e97518ca::t_7644b83eac0feb 38
+.github/workflows/ci.yml
+  s_4de656e97518ca::t_6320eaba1f9bc4 15
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "3bb8faf1e570722cedf5a2aee23f8963b967f826",
+  "prompts": {},
+  "sessions": {
+    "s_4de656e97518ca": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "aa3d9a7e-2066-4dc4-875f-a54389702122",
+        "model": "claude-fable-5-2"
+      },
+      "human_author": null
+    }
+  }
+}
