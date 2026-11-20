@@ -1,7 +1,10 @@
 {
   "name": "@mailtrap/convex",
   "description": "A Convex component for Mailtrap email sending and inbound receiving.",
-  "repository": "github:mailtrap/mailtrap-convex",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mailtrap/mailtrap-convex.git"
+  },
   "homepage": "https://github.com/mailtrap/mailtrap-convex#readme",
   "bugs": {
     "url": "https://github.com/mailtrap/mailtrap-convex/issues"
