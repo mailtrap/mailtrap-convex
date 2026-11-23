@@ -1,6 +1,6 @@
 /* eslint-disable */
 /**
- * `ComponentApi` for @mailtrap/convex.
+ * `ComponentApi` for mailtrap-convex.
  *
  * Hand-authored to mirror the public surface of src/component/lib.ts.
  * Keep in sync when adding or changing exposed functions.
