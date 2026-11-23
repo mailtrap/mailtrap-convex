@@ -11,14 +11,14 @@
     "noEmit": true,
     "baseUrl": ".",
     "paths": {
-      "@mailtrap/convex": ["../../src/client/index.ts"],
-      "@mailtrap/convex/convex.config": [
+      "mailtrap-convex": ["../../src/client/index.ts"],
+      "mailtrap-convex/convex.config": [
         "../../src/component/convex.config.ts"
       ],
-      "@mailtrap/convex/convex.config.js": [
+      "mailtrap-convex/convex.config.js": [
         "../../src/component/convex.config.ts"
       ],
-      "@mailtrap/convex/_generated/component.js": [
+      "mailtrap-convex/_generated/component.js": [
         "../../src/component/_generated/component.d.ts"
       ]
     }

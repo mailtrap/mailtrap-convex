@@ -163,7 +163,7 @@ jobs:
       - name: Check npm release
         uses: railsware/github-actions/check-sdk-npm-release@master
         with:
-          package: '@mailtrap/convex'
+          package: 'mailtrap-convex'
           version: ${{ needs.detect.outputs.version }}
 
       - name: Check GitHub release

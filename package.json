@@ -1,5 +1,5 @@
 {
-  "name": "@mailtrap/convex",
+  "name": "mailtrap-convex",
   "description": "A Convex component for Mailtrap email sending and inbound receiving.",
   "repository": {
     "type": "git",

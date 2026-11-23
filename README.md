@@ -1,4 +1,4 @@
-# @mailtrap/convex
+# mailtrap-convex
 
 A [Convex](https://convex.dev) component for [Mailtrap](https://mailtrap.io).
 
@@ -21,7 +21,7 @@ Send transactional and bulk email through the Mailtrap Email API, and receive in
 ## Install
 
 ```bash
-npm install @mailtrap/convex
+npm install mailtrap-convex
 ```
 
 Wire it into your Convex app:
@@ -29,7 +29,7 @@ Wire it into your Convex app:
 ```ts
 // convex/convex.config.ts
 import { defineApp } from "convex/server";
-import mailtrap from "@mailtrap/convex/convex.config.js";
+import mailtrap from "mailtrap-convex/convex.config.js";
 
 const app = defineApp();
 app.use(mailtrap);
@@ -51,7 +51,7 @@ npx convex env set MAILTRAP_TEST_INBOX_ID 123456
 // convex/email.ts
 import { mutation, query } from "./_generated/server";
 import { components } from "./_generated/api";
-import { Mailtrap } from "@mailtrap/convex";
+import { Mailtrap } from "mailtrap-convex";
 import { v } from "convex/values";
 
 const mailtrap = new Mailtrap(components.mailtrap);
@@ -137,7 +137,7 @@ Mount the webhook handler in `convex/http.ts`:
 import { httpRouter } from "convex/server";
 import { httpAction } from "./_generated/server";
 import { components } from "./_generated/api";
-import { Mailtrap } from "@mailtrap/convex";
+import { Mailtrap } from "mailtrap-convex";
 
 const mailtrap = new Mailtrap(components.mailtrap);
 const http = httpRouter();
@@ -182,7 +182,7 @@ Schedule an action for reply/forward (they need an action context):
 ```ts
 import { internalAction, internalMutation } from "./_generated/server";
 import { components, internal } from "./_generated/api";
-import { Mailtrap } from "@mailtrap/convex";
+import { Mailtrap } from "mailtrap-convex";
 
 const mailtrap: Mailtrap = new Mailtrap(components.mailtrap, {
   onMessageReceived: internal.email.onMessageReceived,

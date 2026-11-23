@@ -15,7 +15,7 @@ import type {
   FilterApi,
   FunctionReference,
 } from "convex/server";
-import type { ComponentApi } from "@mailtrap/convex/_generated/component.js";
+import type { ComponentApi } from "mailtrap-convex/_generated/component.js";
 
 declare const fullApi: ApiFromModules<{
   example: typeof example;

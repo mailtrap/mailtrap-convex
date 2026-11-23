@@ -1,6 +1,6 @@
 # Example app
 
-Minimal Convex app demonstrating `@mailtrap/convex` sending and receiving.
+Minimal Convex app demonstrating `mailtrap-convex` sending and receiving.
 
 ## Setup
 

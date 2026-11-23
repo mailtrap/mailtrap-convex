@@ -7,7 +7,7 @@ import {
   query,
 } from "./_generated/server";
 import { components, internal } from "./_generated/api";
-import { Mailtrap, type EmailId } from "@mailtrap/convex";
+import { Mailtrap, type EmailId } from "mailtrap-convex";
 
 // Annotated: `internal` is derived from this module's exports, whose types
 // depend on `mailtrap`, so inference alone would be circular.
@@ -71,7 +71,7 @@ export const sendBatch = mutation({
       base: {
         from: { email: args.fromEmail },
         subject: args.subject,
-        text: "Batch hello from @mailtrap/convex",
+        text: "Batch hello from mailtrap-convex",
       },
       requests: args.recipients.map((email) => ({
         to: [{ email }],

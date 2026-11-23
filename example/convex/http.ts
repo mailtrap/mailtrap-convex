@@ -1,7 +1,7 @@
 import { httpRouter } from "convex/server";
 import { httpAction } from "./_generated/server";
 import { components } from "./_generated/api";
-import { Mailtrap } from "@mailtrap/convex";
+import { Mailtrap } from "mailtrap-convex";
 
 const mailtrap: Mailtrap = new Mailtrap(components.mailtrap);
 const http = httpRouter();
