@@ -1,0 +1,54 @@
+package.json
+  s_4de656e97518ca::t_3cdeaa5f724857 4-7
+  s_4de656e97518ca::t_a7a086c975d19e 2
+CHANGELOG.md
+  s_4de656e97518ca::t_6b944ec53906f9 2
+  s_4de656e97518ca::t_7e7a959464744a 1
+.github/workflows/draft-release.yml
+  s_4de656e97518ca::t_b38f164266ab54 2-27,29-37,39-61,64-65,67-90
+  s_4de656e97518ca::t_41dba5da12a8a8 62-63,66
+  s_4de656e97518ca::t_7644b83eac0feb 38
+  s_4de656e97518ca::t_a7a086c975d19e 1,28
+.github/workflows/ci.yml
+  s_4de656e97518ca::t_6320eaba1f9bc4 15
+.github/workflows/release.yml
+  s_4de656e97518ca::t_b49e741025e1f1 1-88,90-165,167-182
+  s_4de656e97518ca::t_e4061b8de2edbe 89
+  s_4de656e97518ca::t_a7a086c975d19e 166
+example/convex/example.ts
+  s_4de656e97518ca::t_a7a086c975d19e 10,74
+README.md
+  s_4de656e97518ca::t_a7a086c975d19e 1,24,32,54,140,185
+example/convex/_generated/api.d.ts
+  s_4de656e97518ca::t_a7a086c975d19e 18
+example/convex/convex.config.ts
+  s_4de656e97518ca::t_a7a086c975d19e 2
+example/README.md
+  s_4de656e97518ca::t_a7a086c975d19e 3
+example/convex/http.ts
+  s_4de656e97518ca::t_a7a086c975d19e 4
+example/convex/tsconfig.json
+  s_4de656e97518ca::t_a7a086c975d19e 14-15,18,21
+src/component/_generated/component.d.ts
+  s_4de656e97518ca::t_a7a086c975d19e 3
+package-lock.json
+  s_4de656e97518ca::t_4798c281921716 2,8
+.tool-versions
+  s_4de656e97518ca::t_c939c6fd5d3fee 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "c28ccc1fe16239f66036ff39da66c655b1c8fd09",
+  "prompts": {},
+  "sessions": {
+    "s_4de656e97518ca": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "aa3d9a7e-2066-4dc4-875f-a54389702122",
+        "model": "unknown"
+      },
+      "human_author": null
+    }
+  }
+}
