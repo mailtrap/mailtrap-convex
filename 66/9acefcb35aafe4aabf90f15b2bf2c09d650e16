@@ -1,0 +1,41 @@
+example/convex/example.ts
+  s_4de656e97518ca::t_a7a086c975d19e 10,74
+README.md
+  s_4de656e97518ca::t_a7a086c975d19e 1,24,32,54,140,185
+example/convex/_generated/api.d.ts
+  s_4de656e97518ca::t_a7a086c975d19e 18
+example/convex/convex.config.ts
+  s_4de656e97518ca::t_a7a086c975d19e 2
+example/README.md
+  s_4de656e97518ca::t_a7a086c975d19e 3
+package.json
+  s_4de656e97518ca::t_a7a086c975d19e 2
+example/convex/http.ts
+  s_4de656e97518ca::t_a7a086c975d19e 4
+.github/workflows/draft-release.yml
+  s_4de656e97518ca::t_a7a086c975d19e 1,28
+example/convex/tsconfig.json
+  s_4de656e97518ca::t_a7a086c975d19e 14-15,18,21
+.github/workflows/release.yml
+  s_4de656e97518ca::t_a7a086c975d19e 166
+src/component/_generated/component.d.ts
+  s_4de656e97518ca::t_a7a086c975d19e 3
+package-lock.json
+  s_4de656e97518ca::t_4798c281921716 2,8
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "669acefcb35aafe4aabf90f15b2bf2c09d650e16",
+  "prompts": {},
+  "sessions": {
+    "s_4de656e97518ca": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "aa3d9a7e-2066-4dc4-875f-a54389702122",
+        "model": "claude-fable-5-2"
+      },
+      "human_author": "Marcin Klocek <marcin.klocek@railsware.com>"
+    }
+  }
+}
