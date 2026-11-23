@@ -1,0 +1,21 @@
+.tool-versions
+  s_4de656e97518ca::t_c939c6fd5d3fee 1
+CHANGELOG.md
+  s_4de656e97518ca::t_7e7a959464744a 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "a065270ecd1790dd5e006b229e419a78cfeaf802",
+  "prompts": {},
+  "sessions": {
+    "s_4de656e97518ca": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "aa3d9a7e-2066-4dc4-875f-a54389702122",
+        "model": "claude-fable-5-2"
+      },
+      "human_author": "Marcin Klocek <marcin.klocek@railsware.com>"
+    }
+  }
+}
